@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-custom": "ng build --base-href /Angular15_Example/ --deploy-url /Angular15_Example/ --configuration production", 
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
