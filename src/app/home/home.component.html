@@ -11,4 +11,6 @@
     <input [value]="name" [title]="'This is ' + name"/>
     <br />
 
+    <h3 *ngIf="age < 15">You are young</h3>
+    <h3 *ngIf="age > 15">You are old</h3>
 </div>
