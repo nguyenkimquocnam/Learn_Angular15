@@ -1,6 +1,14 @@
 <div class="box">
     <h1>This is component Home</h1>
     <h2>Lesson 2 - Component</h2>
-
     <p>My name is: {{name}}</p>
+
+    <!-- Way 1 -->
+    <input value="{{ name }}" title="This is {{ name }}"/>
+    <br />
+
+    <!-- Way 2 -->
+    <input [value]="name" [title]="'This is ' + name"/>
+    <br />
+
 </div>
