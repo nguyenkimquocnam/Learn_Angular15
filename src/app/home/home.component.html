@@ -1,10 +1,9 @@
 <div class="box">
-    <h1>Lesson ng-template</h1>
-    
-    <input type="text" [(ngModel)]="age"/>
-    <h3>My age is {{ age }}</h3>
-
-    <div *ngIf="age <= 15; then young; else old"></div>
-    <ng-template #young><h2>You are young!</h2></ng-template>
-    <ng-template #old><h2>You are old!</h2></ng-template>
+    <h1>Usage *ngFor</h1>
+    <h2>List name</h2>
+    <div *ngFor="let name of listName">
+        <li>
+            {{ name }}
+        </li>
+    </div>
 </div>
