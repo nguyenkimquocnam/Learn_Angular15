@@ -1,9 +1,17 @@
 <div class="box">
-    <h1>Usage *ngFor</h1>
-    <h2>List name</h2>
-    <div *ngFor="let name of listName">
-        <li>
-            {{ name }}
-        </li>
-    </div>
+    <h1>*ngFor Apply</h1>
+    <table style="width:100%">
+        <tr>
+          <th>No</th>
+          <th>Name</th>
+          <th>Price</th> 
+          <th>Best Seller</th>
+        </tr>
+        <tr *ngFor="let fruit of listFruits; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ fruit.name }}</td>
+          <td [ngClass]="{ 'price-minus': fruit.price < 0 }">{{ fruit.price }}</td>
+          <td *ngIf=" fruit.bestSeller">Best Seller</td>
+        </tr>
+      </table>
 </div>
