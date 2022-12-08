@@ -1,16 +1,7 @@
 <div class="box">
     <h1>This is component Home</h1>
-    <h2>Lesson 2 - Component</h2>
+    <h2>Two Way Binding</h2>
+    <input type="text" [(ngModel)]="name"/>
     <p>My name is: {{name}}</p>
-
-    <!-- Way 1 -->
-    <input value="{{ name }}" title="This is {{ name }}"/>
-    <br />
-
-    <!-- Way 2 -->
-    <input [value]="name" [title]="'This is ' + name"/>
-    <br />
-
-    <h3 *ngIf="age < 15">You are young</h3>
-    <h3 *ngIf="age > 15">You are old</h3>
+    <button (click)="resetName()">Reset Name</button>
 </div>
