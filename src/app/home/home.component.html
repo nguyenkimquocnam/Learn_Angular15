@@ -9,9 +9,9 @@
         </tr>
         <tr *ngFor="let fruit of listFruits; let i = index">
           <td>{{ i + 1 }}</td>
-          <td>{{ fruit.name }}</td>
-          <td [ngClass]="{ 'price-minus': fruit.price < 0 }">{{ fruit.price }}</td>
-          <td *ngIf=" fruit.bestSeller">Best Seller</td>
+          <td>{{ fruit.name | uppercase }}</td>
+          <td [ngClass]="{ 'price-minus': fruit.price < 0 }">{{ fruit.price | currency:"VND" }}</td>
+          <td>{{ fruit.bestSeller | onSale }}</td>
         </tr>
       </table>
 </div>
