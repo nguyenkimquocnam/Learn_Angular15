@@ -1,6 +1,6 @@
 <div class="box">
-    <h1>*ngFor Apply</h1>
-    <table style="width:100%">
+  <h1>*ngFor - Combobox</h1>
+  <!-- <table style="width:100%">
         <tr>
           <th>No</th>
           <th>Name</th>
@@ -13,5 +13,18 @@
           <td [ngClass]="{ 'price-minus': fruit.price < 0 }">{{ fruit.price | currency:"VND" }}</td>
           <td>{{ fruit.bestSeller | onSale }}</td>
         </tr>
-      </table>
+      </table> -->
+
+  Chọn Tỉnh/Thành phố:
+  <select id="city" (change)="changeCity($event)">
+    <option value="{{city.city}}" *ngFor="let city of cities">{{city.city}}</option>
+  </select>
+
+  <br />
+
+  Chọn Quận/Huyện:
+  <select id="district">
+    <option value="{{district}}" *ngFor="let district of districts">{{district}}</option>
+  </select>
+
 </div>
